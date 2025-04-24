@@ -1,33 +1,60 @@
-HELP.md
+# BACKEND - Java (Maven)
 target/
-!.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
-!**/src/test/**/target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+build.log
+.mvn/wrapper/maven-wrapper.jar
+*.log
 
-### STS ###
-.apt_generated
-.classpath
-.factorypath
-.project
-.settings
-.springBeans
-.sts4-cache
+# Ignore build outputs in any submodule
+**/target/
+**/build/
 
-### IntelliJ IDEA ###
-.idea
-*.iws
-*.iml
-*.ipr
+# FRONTEND - Node.js + React
+frontend/node_modules/
+frontend/build/
+frontend/.env.local
+frontend/.env.development.local
+frontend/.env.test.local
+frontend/.env.production.local
 
-### NetBeans ###
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
-build/
-!**/src/main/**/build/
-!**/src/test/**/build/
-
-### VS Code ###
+# IDEs - VSCode, IntelliJ, Eclipse, NetBeans
 .vscode/
+.idea/
+*.iml
+*.iws
+*.ipr
+.classpath
+.project
+.settings/
+.sts4-cache
+.apt_generated
+.factorypath
+
+# Mac & OS hidden files
+.DS_Store
+Thumbs.db
+
+# Backup/SWAPs
+*.swp
+*.swo
+*.bak
+*.tmp
+
+# LICENSEs geradas por pacotes
+**/node_modules/**/LICENSE
+
+# Se você usa Git LFS, pode ignorar arquivos temporários
+*.lfs*
+
+# Arquivos de configuração do MySQL
+mysql-config.cnf
+
+# Arquivos de configuração do PostgreSQL
+postgresql.conf
+
+

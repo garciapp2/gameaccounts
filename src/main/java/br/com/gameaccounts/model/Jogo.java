@@ -8,24 +8,28 @@ public class Jogo {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nome;
-    private String genero;
+    private String plataforma;
 
     public Jogo() {}
 
-    public Jogo(String nome, String genero) {
+    public Jogo(String nome, String plataforma) {
         this.nome = nome;
-        this.genero = genero;
+        this.plataforma = plataforma;
     }
 
     public Long getId() {
         return id;
+    }
+    
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getNome() {
         return nome;
     }
 
-    public String getGenero() {
-        return genero;
+    public String getPlataforma() {
+        return plataforma;
     }
 }

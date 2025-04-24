@@ -7,33 +7,37 @@ public class ContaJogo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String nickname;
-    private int nivel;
+    private String login;
+    private String senha;
 
     @ManyToOne
-    private Usuario dono;
+    private Jogo jogo;
 
     public ContaJogo() {}
 
-    public ContaJogo(String nickname, int nivel, Usuario dono) {
-        this.nickname = nickname;
-        this.nivel = nivel;
-        this.dono = dono;
+    public ContaJogo(String login, String senha, Jogo jogo) {
+        this.login = login;
+        this.senha = senha;
+        this.jogo = jogo;
     }
 
     public Long getId() {
         return id;
     }
-
-    public String getNickname() {
-        return nickname;
+    
+    public void setId(Long id) {
+        this.id = id;
     }
 
-    public int getNivel() {
-        return nivel;
+    public String getLogin() {
+        return login;
     }
 
-    public Usuario getDono() {
-        return dono;
+    public String getSenha() {
+        return senha;
+    }
+
+    public Jogo getJogo() {
+        return jogo;
     }
 }
